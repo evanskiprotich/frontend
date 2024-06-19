@@ -1,12 +1,13 @@
-import React, { SyntheticEvent } from 'react'
-import CardPortfolio from '../CardPortfolio/CardPortfolio';
+import React, { SyntheticEvent } from "react";
+import CardPortfolio from "../CardPortfolio/CardPortfolio";
+import { PortfolioGet } from "../../../Models/Portfolio";
 
 interface Props {
-    portfolioValues: string[];
-    onPortfolioDelete: (e: SyntheticEvent) => void;
+  portfolioValues: PortfolioGet[];
+  onPortfolioDelete: (e: SyntheticEvent) => void;
 }
 
-const ListPortfolio = ({portfolioValues, onPortfolioDelete}: Props) => {
+const ListPortfolio = ({ portfolioValues, onPortfolioDelete }: Props) => {
   return (
     <section id="portfolio">
       <h2 className="mb-3 mt-3 text-3xl font-semibold text-center md:text-4xl">
@@ -31,7 +32,7 @@ const ListPortfolio = ({portfolioValues, onPortfolioDelete}: Props) => {
         </>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ListPortfolio
+export default ListPortfolio;
